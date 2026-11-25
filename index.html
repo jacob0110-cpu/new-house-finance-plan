@@ -56,6 +56,35 @@
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
             cursor: pointer;
         }
+
+        /* Section color zones (screen + print) */
+        .sec { padding: 1.25rem; border-radius: 1.5rem; border-top: 5px solid var(--sec-accent); background: var(--sec-bg); }
+        @media (min-width: 640px) { .sec { padding: 1.75rem; } }
+        .sec-1 { --sec-bg: #E6F0EA; --sec-accent: #1E4D40; }
+        .sec-2 { --sec-bg: #FBF0DD; --sec-accent: #B45309; }
+        .sec-3 { --sec-bg: #E5ECF5; --sec-accent: #2F5D8C; }
+        .sec-4 { --sec-bg: #EEE8F4; --sec-accent: #6B4C8A; }
+        @media print {
+            @page { size: A4; margin: 10mm; }
+            html { font-size: 12.5px; }
+            * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            main { space-y: 0; }
+            main > * + * { margin-top: 0.75rem !important; }
+            .sec { break-inside: auto !important; padding: 1rem; }
+            .sec-2, .sec-3, .sec-4 { break-before: page; }
+            .sec .print-card { background: #fff !important; }
+            /* keep desktop layouts on A4 width */
+            .lg\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)) !important; }
+            .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+            .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+            .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+            .sm\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+            .lg\:col-span-7 { grid-column: span 7 / span 7 !important; }
+            .lg\:col-span-5 { grid-column: span 5 / span 5 !important; }
+            .lg\:sticky { position: static !important; }
+            .sm\:table-cell { display: table-cell !important; }
+            .overflow-x-auto { overflow: visible !important; }
+        }
         /* Print Styles */
         @media print {
             body {
@@ -74,10 +103,7 @@
                 max-width: 100% !important;
                 padding: 0 !important;
             }
-            section {
-                break-inside: avoid;
-                margin-bottom: 1.5rem !important;
-            }
+            section { margin-bottom: 0 !important; }
         }
     </style>
 </head>
@@ -136,7 +162,7 @@
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#1E4D40]/10 text-[#1E4D40]">
                     <i class="fa-solid fa-location-dot"></i> 台北市文山區 · 萬隆生活圈
                 </span>
-                <span class="text-xs text-slate-400 num-font">規劃基準：2030 出售舊屋 ➔ 2031 預售屋交屋</span>
+                <span class="no-print text-xs text-slate-400 num-font">規劃基準：2030 出售舊屋 ➔ 2031 預售屋交屋</span>
             </div>
             <h2 class="serif-title text-xl sm:text-2xl font-bold text-[#1E293B] tracking-tight">
                 台北市文山區萬隆中古屋｜2030 出售與 2031 換屋試算查詢手冊
@@ -160,13 +186,13 @@
         <!-- ========================================================= -->
         <!-- SECTION 1: 2030 SALE & NET PROCEEDS CALCULATOR            -->
         <!-- ========================================================= -->
-        <section id="sec-sale" class="scroll-mt-28 space-y-5">
+        <section id="sec-sale" class="sec sec-1 scroll-mt-28 space-y-5">
             <div class="flex flex-wrap items-end justify-between gap-2">
                 <div>
                     <span class="text-xs font-bold tracking-wider uppercase text-[#B45309]">SECTION 01</span>
                     <h3 class="text-lg sm:text-xl font-bold text-[#1E293B]">1. 2030 年萬隆舊屋售價與淨實拿試算器</h3>
                 </div>
-                <p class="text-xs text-slate-500">試算出的「預估交屋實拿淨現金」將自動連動至第 3 區塊的新屋資金池</p>
+                <p class="no-print text-xs text-slate-500">試算出的「預估交屋實拿淨現金」將自動連動至第 3 區塊的新屋資金池</p>
             </div>
 
             <!-- 12-Column Asymmetric Layout: Left 7 Cols Controls + Right 5 Cols Sticky Statement -->
@@ -176,7 +202,7 @@
                 <div class="lg:col-span-7 bg-white rounded-2xl border border-[#E6E4DF] p-5 sm:p-6 shadow-sm space-y-5 print-card">
 
                     <!-- 1. Three Market Scenario Quick Presets (Equal 3-Col Grid) -->
-                    <div>
+                    <div class="no-print">
                         <div class="flex items-center justify-between mb-2.5">
                             <label class="text-xs font-bold text-slate-700">2030 年市場行情情境快選（43 坪基準）</label>
                             <span class="text-[11px] text-slate-400">點擊可一鍵帶入單價</span>
@@ -218,7 +244,7 @@
                             </div>
                         </div>
                         <input type="range" id="sale-unit-price" min="50" max="120" step="0.5" value="80" oninput="syncUnitPriceFromSlider()" class="w-full my-1.5 no-print">
-                        <div class="flex justify-between text-[11px] text-slate-400 num-font mt-1">
+                        <div class="no-print flex justify-between text-[11px] text-slate-400 num-font mt-1">
                             <span>50 萬/坪</span>
                             <span class="text-slate-500">73萬(保守) · 80萬(穩健) · 86萬(樂觀)</span>
                             <span>120 萬/坪</span>
@@ -238,7 +264,7 @@
                             </div>
                         </div>
                         <input type="range" id="sale-comm-rate" min="1.0" max="4.0" step="0.1" value="3.0" oninput="syncCommRateFromSlider()" class="w-full my-1.5 no-print">
-                        <div class="flex justify-between text-[11px] text-slate-400 num-font mt-1">
+                        <div class="no-print flex justify-between text-[11px] text-slate-400 num-font mt-1">
                             <span>1%</span>
                             <span class="text-slate-500">2% 優惠 · 3% 常見 · 4% 法定上限</span>
                             <span>4%</span>
@@ -444,7 +470,7 @@
             </div>
 
             <!-- Compact 3-Scenario Reference Table -->
-            <div class="bg-white rounded-2xl border border-[#E6E4DF] px-5 sm:px-6 py-4 shadow-sm print-card">
+            <div class="no-print bg-white rounded-2xl border border-[#E6E4DF] px-5 sm:px-6 py-4 shadow-sm print-card">
                 <div class="text-xs font-bold text-slate-600 mb-2.5">2030 年三種市場走勢快速對照表（43 坪純主建＋公設）：</div>
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse text-xs">
@@ -488,7 +514,7 @@
         <!-- ========================================================= -->
         <!-- SECTION 2: DUAL RED-LINE TIMELINE                         -->
         <!-- ========================================================= -->
-        <section id="sec-timeline" class="scroll-mt-28 space-y-5">
+        <section id="sec-timeline" class="sec sec-2 scroll-mt-28 space-y-5">
             <div>
                 <span class="text-xs font-bold tracking-wider uppercase text-[#B45309]">SECTION 02</span>
                 <h3 class="text-lg sm:text-xl font-bold text-[#1E293B]">2. 2030 賣舊屋 ＋ 2031 預售屋交屋「雙重財務紅線」互動時間軸</h3>
@@ -556,13 +582,13 @@
         <!-- ========================================================= -->
         <!-- SECTION 3: 2031 PRESALE MORTGAGE & MONTHLY PAYMENT        -->
         <!-- ========================================================= -->
-        <section id="sec-mortgage" class="scroll-mt-28 space-y-5">
+        <section id="sec-mortgage" class="sec sec-3 scroll-mt-28 space-y-5">
             <div class="flex flex-wrap items-end justify-between gap-2">
                 <div>
                     <span class="text-xs font-bold tracking-wider uppercase text-[#B45309]">SECTION 03</span>
                     <h3 class="text-lg sm:text-xl font-bold text-[#1E293B]">3. 2031 預售屋資金結算（含目前已繳款項明細、自由貸款成數）與月繳款預估</h3>
                 </div>
-                <p class="text-xs text-slate-500">結合第 1 區塊售屋淨實拿現金，自動精算交屋需補尾款與交屋後可動用餘裕</p>
+                <p class="no-print text-xs text-slate-500">結合第 1 區塊售屋淨實拿現金，自動精算交屋需補尾款與交屋後可動用餘裕</p>
             </div>
 
             <!-- Step A: Pre-sale Total Price + Itemized Already-Paid Breakdown + Free LTV -->
@@ -579,7 +605,7 @@
                             </div>
                         </div>
                         <input type="range" id="mtg-presale-price" min="1000" max="8000" step="50" value="3800" oninput="syncPresaleFromSlider()" class="w-full my-2 no-print">
-                        <div class="flex justify-between text-[10px] text-slate-400 num-font">
+                        <div class="no-print flex justify-between text-[10px] text-slate-400 num-font">
                             <span>1,000萬</span>
                             <span>3,800萬</span>
                             <span>5,500萬</span>
@@ -752,7 +778,7 @@
                                 </div>
                             </div>
                             <input type="range" id="mtg-rate" min="1.50" max="3.50" step="0.05" value="2.25" oninput="syncRateFromSlider()" class="w-full my-2 no-print">
-                            <div class="flex justify-between text-[10px] text-slate-400 num-font">
+                            <div class="no-print flex justify-between text-[10px] text-slate-400 num-font">
                                 <span>1.50%</span>
                                 <span>2.15%(優惠)</span>
                                 <span>2.25%(基準)</span>
@@ -852,7 +878,7 @@
                     </div>
 
                     <!-- Visual Principal vs Interest Structure Bar (SVG/CSS) -->
-                    <div class="lg:col-span-5 bg-white p-4 rounded-xl border border-[#E6E4DF] space-y-3">
+                    <div class="no-print lg:col-span-5 bg-white p-4 rounded-xl border border-[#E6E4DF] space-y-3">
                         <div class="flex items-center justify-between">
                             <span class="text-xs font-bold text-[#1E293B]">還款總額本息結構視覺圖</span>
                             <span class="text-[11px] text-slate-500 num-font">總還款 <strong id="vis-total-repay" class="text-slate-800">4,264.3</strong> 萬</span>
@@ -882,7 +908,7 @@
         <!-- ========================================================= -->
         <!-- SECTION 4: PHASED ACTION CHECKLIST                        -->
         <!-- ========================================================= -->
-        <section id="sec-checklist" class="scroll-mt-28 space-y-5">
+        <section id="sec-checklist" class="sec sec-4 scroll-mt-28 space-y-5">
             <div class="flex flex-wrap items-center justify-between gap-2">
                 <div>
                     <span class="text-xs font-bold tracking-wider uppercase text-[#B45309]">SECTION 04</span>
