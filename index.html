@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台北市文山區萬隆中古屋｜2030 出售與 2031 換屋試算查詢手冊</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #F9F8F6;
+            color: #1E293B;
+        }
+        .serif-title {
+            font-family: 'Noto Serif TC', 'Noto Sans TC', serif;
+        }
+        .num-font {
+            font-family: 'Inter', sans-serif;
+            font-variant-numeric: tabular-nums;
+        }
+        /* Custom Range Slider */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 6px;
+            background: #E6E4DF;
+            border-radius: 999px;
+            outline: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #1E4D40;
+            border: 3px solid #FFFFFF;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+            background: #15382E;
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #1E4D40;
+            border: 3px solid #FFFFFF;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+        }
+        /* Print Styles */
+        @media print {
+            body {
+                background-color: #FFFFFF !important;
+                color: #0F172A !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-card {
+                box-shadow: none !important;
+                border: 1px solid #CBD5E1 !important;
+                break-inside: avoid;
+            }
+            main {
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+            section {
+                break-inside: avoid;
+                margin-bottom: 1.5rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#1E4D40] selection:text-white">
+
+    <!-- Sticky Header & Quick Anchor Bar -->
+    <header class="sticky top-0 z-40 bg-[#F9F8F6]/95 backdrop-blur-md border-b border-[#E6E4DF] no-print">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-[#1E4D40] text-white flex items-center justify-center shadow-sm">
+                        <i class="fa-solid fa-house-chimney text-sm"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-sm sm:text-base font-bold text-[#1E293B] leading-snug">
+                            台北市文山區萬隆中古屋｜2030 出售與 2031 換屋試算查詢手冊
+                        </h1>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button type="button" onclick="resetAll()" class="px-3 py-1.5 text-xs font-medium rounded-lg bg-white hover:bg-slate-100 text-slate-600 border border-[#E6E4DF] transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        <span>重設預設</span>
+                    </button>
+                    <button type="button" onclick="window.print()" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-[#1E4D40] hover:bg-[#15382E] text-white shadow-sm transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-print"></i>
+                        <span>列印 / 匯出 PDF</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick Anchor Jump Bar -->
+            <nav class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pt-2.5 mt-2.5 border-t border-[#E6E4DF]/80 text-xs" aria-label="章節快速導覽">
+                <a href="#sec-sale" class="px-3 py-1.5 rounded-full bg-white hover:bg-[#1E4D40] hover:text-white text-slate-700 font-medium border border-[#E6E4DF] whitespace-nowrap transition">
+                    1. 2030 售價與實拿試算
+                </a>
+                <a href="#sec-timeline" class="px-3 py-1.5 rounded-full bg-white hover:bg-[#1E4D40] hover:text-white text-slate-700 font-medium border border-[#E6E4DF] whitespace-nowrap transition">
+                    2. 換屋雙重紅線時間軸
+                </a>
+                <a href="#sec-mortgage" class="px-3 py-1.5 rounded-full bg-white hover:bg-[#1E4D40] hover:text-white text-slate-700 font-medium border border-[#E6E4DF] whitespace-nowrap transition">
+                    3. 2031 新屋貸款與月繳試算
+                </a>
+                <a href="#sec-checklist" class="px-3 py-1.5 rounded-full bg-white hover:bg-[#1E4D40] hover:text-white text-slate-700 font-medium border border-[#E6E4DF] whitespace-nowrap transition">
+                    4. 分階段行動檢核清單
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-10 space-y-10">
+
+        <!-- Hero Title & Property Spec Banner -->
+        <div class="bg-white rounded-2xl border border-[#E6E4DF] p-5 sm:p-7 shadow-sm print-card">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#1E4D40]/10 text-[#1E4D40]">
+                    <i class="fa-solid fa-location-dot"></i> 台北市文山區 · 萬隆生活圈
+                </span>
+                <span class="text-xs text-slate-400 num-font">規劃基準：2030 出售舊屋 ➔ 2031 預售屋交屋</span>
+            </div>
+            <h2 class="serif-title text-xl sm:text-2xl font-bold text-[#1E293B] tracking-tight">
+                台北市文山區萬隆中古屋｜2030 出售與 2031 換屋試算查詢手冊
+            </h2>
+            <div class="mt-4 pt-4 border-t border-[#E6E4DF] flex flex-wrap gap-2 text-xs sm:text-sm">
+                <span class="px-3 py-1.5 rounded-lg bg-[#F9F8F6] border border-[#E6E4DF] text-slate-700 font-medium">
+                    <i class="fa-solid fa-ruler-combined text-[#1E4D40] mr-1.5"></i>43 坪（純主建＋公設，不含車位產權）
+                </span>
+                <span class="px-3 py-1.5 rounded-lg bg-[#F9F8F6] border border-[#E6E4DF] text-slate-700 font-medium">
+                    <i class="fa-solid fa-building text-[#1E4D40] mr-1.5"></i>16F/16F 頂樓景觀戶
+                </span>
+                <span class="px-3 py-1.5 rounded-lg bg-[#F9F8F6] border border-[#E6E4DF] text-slate-700 font-medium">
+                    <i class="fa-regular fa-calendar text-[#1E4D40] mr-1.5"></i>2030 年屋齡約 31 年
+                </span>
+                <span class="px-3 py-1.5 rounded-lg bg-amber-50 border border-amber-200/80 text-[#B45309] font-semibold">
+                    <i class="fa-solid fa-square-parking mr-1.5"></i>社區大公車位（保證有位・月租制）
+                </span>
+            </div>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 1: 2030 SALE & NET PROCEEDS CALCULATOR            -->
+        <!-- ========================================================= -->
+        <section id="sec-sale" class="scroll-mt-28 space-y-5">
+            <div class="flex flex-wrap items-end justify-between gap-2">
+                <div>
+                    <span class="text-xs font-bold tracking-wider uppercase text-[#B45309]">SECTION 01</span>
+                    <h3 class="text-lg sm:text-xl font-bold text-[#1E293B]">1. 2030 年萬隆舊屋售價與淨實拿試算器</h3>
+                </div>
+                <p class="text-xs text-slate-500">試算出的「預估交屋實拿淨現金」將自動連動至第 3 區塊的新屋資金池</p>
+            </div>
+
+            <!-- 12-Column Asymmetric Layout: Left 7 Cols Controls + Right 5 Cols Sticky Statement -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+
+                <!-- Left Column (7 cols): Input Controls -->
+                <div class="lg:col-span-7 bg-white rounded-2xl border border-[#E6E4DF] p-5 sm:p-6 shadow-sm space-y-5 print-card">
+
+                    <!-- 1. Three Market Scenario Quick Presets (Equal 3-Col Grid) -->
+                    <div>
+                        <div class="flex items-center justify-between mb-2.5">
+                            <label class="text-xs font-bold text-slate-700">2030 年市場行情情境快選（43 坪基準）</label>
+                            <span class="text-[11px] text-slate-400">點擊可一鍵帶入單價</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2.5">
+                            <button type="button" onclick="applySaleScenario(73, 'conservative')" id="btn-scen-conservative" class="scen-btn text-left p-3 rounded-xl border border-stone-200 bg-[#F9F8F6] hover:border-[#1E4D40] transition">
+                                <div class="text-xs font-bold text-slate-700">保守持平</div>
+                                <div class="text-sm sm:text-base font-bold text-[#1E293B] num-font mt-0.5">73 萬<span class="text-[11px] font-normal text-slate-500">/坪</span></div>
+                                <div class="text-[11px] text-slate-500 num-font mt-0.5">總價 3,139 萬</div>
+                            </button>
+
+                            <button type="button" onclick="applySaleScenario(80, 'baseline')" id="btn-scen-baseline" class="scen-btn text-left p-3 rounded-xl border-2 border-[#1E4D40] bg-[#1E4D40] text-white shadow-sm transition">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-bold text-emerald-100">穩健基準</span>
+                                    <span class="text-[10px] px-1.5 py-0.5 rounded bg-white/20 text-white font-semibold">推薦</span>
+                                </div>
+                                <div class="text-sm sm:text-base font-bold text-white num-font mt-0.5">80 萬<span class="text-[11px] font-normal text-emerald-200">/坪</span></div>
+                                <div class="text-[11px] text-emerald-100/90 num-font mt-0.5">總價 3,440 萬</div>
+                            </button>
+
+                            <button type="button" onclick="applySaleScenario(86, 'optimistic')" id="btn-scen-optimistic" class="scen-btn text-left p-3 rounded-xl border border-stone-200 bg-[#F9F8F6] hover:border-[#1E4D40] transition">
+                                <div class="text-xs font-bold text-slate-700">樂觀景氣</div>
+                                <div class="text-sm sm:text-base font-bold text-[#1E293B] num-font mt-0.5">86 萬<span class="text-[11px] font-normal text-slate-500">/坪</span></div>
+                                <div class="text-[11px] text-slate-500 num-font mt-0.5">總價 3,698 萬</div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 2. Unit Price Control Box (Two-Tier Stacked Structure) -->
+                    <div class="bg-[#F9F8F6] border border-stone-200/80 rounded-xl p-4">
+                        <div class="flex items-center justify-between gap-4 mb-3">
+                            <div>
+                                <label for="sale-unit-price-num" class="block text-xs sm:text-sm font-bold text-slate-800">預估成交單價（萬/坪）</label>
+                                <span class="text-[11px] text-slate-500">權狀 43.0 坪（純主建＋公設，含社區共有車位使用權優勢）</span>
+                            </div>
+                            <div class="inline-flex items-center bg-white border border-stone-300 focus-within:border-[#1E4D40] focus-within:ring-2 focus-within:ring-[#1E4D40]/15 rounded-lg px-3 py-1.5 shrink-0 shadow-2xs">
+                                <input type="number" id="sale-unit-price-num" min="50" max="120" step="0.5" value="80.0" oninput="syncUnitPriceFromInput()" class="w-20 text-right text-sm sm:text-base font-bold text-[#1E4D40] num-font bg-transparent focus:outline-none">
+                                <span class="text-xs font-semibold text-slate-500 ml-1.5">萬/坪</span>
+                            </div>
+                        </div>
+                        <input type="range" id="sale-unit-price" min="50" max="120" step="0.5" value="80" oninput="syncUnitPriceFromSlider()" class="w-full my-1.5 no-print">
+                        <div class="flex justify-between text-[11px] text-slate-400 num-font mt-1">
+                            <span>50 萬/坪</span>
+                            <span class="text-slate-500">73萬(保守) · 80萬(穩健) · 86萬(樂觀)</span>
+                            <span>120 萬/坪</span>
+                        </div>
+                    </div>
+
+                    <!-- 3. Agency Commission Rate Control Box (Two-Tier Stacked Structure) -->
+                    <div class="bg-[#F9F8F6] border border-stone-200/80 rounded-xl p-4">
+                        <div class="flex items-center justify-between gap-4 mb-3">
+                            <div>
+                                <label for="sale-comm-rate-num" class="block text-xs sm:text-sm font-bold text-slate-800">仲介服務費率（%）</label>
+                                <span class="text-[11px] text-slate-500">賣方法定上限 4%，高總價物件實務常見議定 2% ～ 3%</span>
+                            </div>
+                            <div class="inline-flex items-center bg-white border border-stone-300 focus-within:border-[#1E4D40] focus-within:ring-2 focus-within:ring-[#1E4D40]/15 rounded-lg px-3 py-1.5 shrink-0 shadow-2xs">
+                                <input type="number" id="sale-comm-rate-num" min="1.0" max="4.0" step="0.1" value="3.0" oninput="syncCommRateFromInput()" class="w-20 text-right text-sm sm:text-base font-bold text-[#B45309] num-font bg-transparent focus:outline-none">
+                                <span class="text-xs font-semibold text-slate-500 ml-1.5">%</span>
+                            </div>
+                        </div>
+                        <input type="range" id="sale-comm-rate" min="1.0" max="4.0" step="0.1" value="3.0" oninput="syncCommRateFromSlider()" class="w-full my-1.5 no-print">
+                        <div class="flex justify-between text-[11px] text-slate-400 num-font mt-1">
+                            <span>1%</span>
+                            <span class="text-slate-500">2% 優惠 · 3% 常見 · 4% 法定上限</span>
+                            <span>4%</span>
+                        </div>
+                    </div>
+
+                    <!-- 4. Aligned 3-Column Deduction Grid -->
+                    <div>
+                        <div class="text-xs font-bold text-slate-700 mb-2.5">交屋其他必要扣除項目（萬元）</div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <!-- Col 1: Remaining Mortgage Principal -->
+                            <div class="bg-[#F9F8F6] border border-stone-200/80 rounded-xl p-3 flex flex-col justify-between">
+                                <label for="sale-mortgage-rem" class="block text-xs font-bold text-slate-700 mb-2 min-h-[2rem] leading-snug">
+                                    原房貸剩餘本金<span class="block text-[10px] font-normal text-slate-400">交屋時銀行代償結清</span>
+                                </label>
+                                <div class="flex items-center bg-white border border-stone-300 focus-within:border-[#1E4D40] rounded-lg px-2.5 py-1.5">
+                                    <input type="number" id="sale-mortgage-rem" value="0" min="0" step="10" oninput="recalcAll()" class="w-full text-right text-sm font-bold num-font text-slate-800 bg-transparent focus:outline-none">
+                                    <span class="text-xs text-slate-400 ml-1.5 shrink-0">萬元</span>
+                                </div>
+                            </div>
+
+                            <!-- Col 2: Estimated Land Value Increment Tax -->
+                            <div class="bg-[#F9F8F6] border border-stone-200/80 rounded-xl p-3 flex flex-col justify-between">
+                                <label for="tax-land-val" class="block text-xs font-bold text-slate-700 mb-2 min-h-[2rem] leading-snug">
+                                    預估土地增值稅<span class="block text-[10px] font-normal text-slate-400">自用一生一次/一屋 10%</span>
+                                </label>
+                                <div class="flex items-center bg-white border border-stone-300 focus-within:border-[#1E4D40] rounded-lg px-2.5 py-1.5">
+                                    <input type="number" id="tax-land-val" value="40" min="0" step="5" oninput="recalcAll()" class="w-full text-right text-sm font-bold num-font text-slate-800 bg-transparent focus:outline-none">
+                                    <span class="text-xs text-slate-400 ml-1.5 shrink-0">萬元</span>
+                                </div>
+                            </div>
+
+                            <!-- Col 3: Scrivener & Escrow Fees -->
+                            <div class="bg-[#F9F8F6] border border-stone-200/80 rounded-xl p-3 flex flex-col justify-between">
+                                <label for="sale-misc-fee" class="block text-xs font-bold text-slate-700 mb-2 min-h-[2rem] leading-snug">
+                                    代書塗銷與履保規費<span class="block text-[10px] font-normal text-slate-400">履保分攤＋抵押權塗銷</span>
+                                </label>
+                                <div class="flex items-center bg-white border border-stone-300 focus-within:border-[#1E4D40] rounded-lg px-2.5 py-1.5">
+                                    <input type="number" id="sale-misc-fee" value="2" min="0" step="0.5" oninput="recalcAll()" class="w-full text-right text-sm font-bold num-font text-slate-800 bg-transparent focus:outline-none">
+                                    <span class="text-xs text-slate-400 ml-1.5 shrink-0">萬元</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Smooth Collapsible Capital Gains Tax 2.0 Helper Panel -->
+                    <div class="border border-stone-200 rounded-xl overflow-hidden">
+                        <button type="button" onclick="toggleTaxPanel()" class="w-full px-4 py-3 bg-[#F9F8F6] hover:bg-stone-100/80 flex items-center justify-between text-left transition">
+                            <span class="text-xs sm:text-sm font-bold text-[#1E293B] flex items-center gap-2">
+                                <i class="fa-solid fa-calculator text-[#B45309]"></i>
+                                <span>房地合一稅 2.0 輔助試算面板</span>
+                            </span>
+                            <span class="text-xs text-[#1E4D40] font-semibold flex items-center gap-2">
+                                <span id="tax-summary-pill" class="px-2 py-0.5 rounded-full bg-amber-100/80 text-[#B45309] num-font">預估房地合一稅 58.5 萬</span>
+                                <i id="tax-chevron" class="fa-solid fa-chevron-down transition-transform duration-200"></i>
+                            </span>
+                        </button>
+
+                        <div id="tax-panel-body" class="hidden p-4 bg-white border-t border-stone-200 space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                                <div>
+                                    <label for="tax-regime" class="block text-xs font-bold text-slate-700 mb-1">當初取得時間（稅制適用）</label>
+                                    <select id="tax-regime" onchange="recalcAll()" class="w-full px-3 py-2 rounded-lg border border-stone-300 bg-white text-xs sm:text-sm font-semibold text-slate-800 focus:outline-none focus:border-[#1E4D40]">
+                                        <option value="new20" selected>2016/01/01 後取得（適用房地合一稅 2.0）</option>
+                                        <option value="old">2015/12/31 前取得（舊制財產交易所得）</option>
+                                    </select>
+                                </div>
+
+                                <div id="tax-hold-years-wrap">
+                                    <label for="tax-hold-years" class="block text-xs font-bold text-slate-700 mb-1">2030 年出售時持有年數</label>
+                                    <select id="tax-hold-years" onchange="recalcAll()" class="w-full px-3 py-2 rounded-lg border border-stone-300 bg-white text-xs sm:text-sm font-semibold text-slate-800 focus:outline-none focus:border-[#1E4D40]">
+                                        <option value="over10" selected>超過 10 年（一般稅率 15%）</option>
+                                        <option value="5to10">超過 5 年、未滿 10 年（一般稅率 20%）</option>
+                                        <option value="2to5">超過 2 年、未滿 5 年（一般稅率 35%）</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- New Regime 2.0 Detail Fields -->
+                            <div id="tax-new20-fields" class="pt-3 border-t border-stone-200/80 space-y-3">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                                    <div>
+                                        <label for="tax-buy-cost" class="block text-xs font-bold text-slate-700 mb-1">當初買進取得成本 (萬元)</label>
+                                        <div class="flex items-center bg-white border border-stone-300 rounded-lg px-3 py-1.5">
+                                            <input type="number" id="tax-buy-cost" value="2200" min="0" step="10" oninput="recalcAll()" class="w-full text-right text-sm font-bold num-font text-slate-800 bg-transparent focus:outline-none">
+                                            <span class="text-xs text-slate-400 ml-1.5">萬元</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="tax-deduct-fee" class="block text-xs font-bold text-slate-700 mb-1">可扣除裝潢與移轉費用 (萬元)</label>
+                                        <div class="flex items-center bg-white border border-stone-300 rounded-lg px-3 py-1.5">
+                                            <input type="number" id="tax-deduct-fee" value="150" min="0" step="10" oninput="recalcAll()" class="w-full text-right text-sm font-bold num-font text-slate-800 bg-transparent focus:outline-none">
+                                            <span class="text-xs text-slate-400 ml-1.5">萬元</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <label class="flex items-start gap-2.5 p-3 rounded-lg bg-amber-50/70 border border-amber-200/80 cursor-pointer">
+                                    <input type="checkbox" id="tax-self-use-6yr" checked onchange="recalcAll()" class="mt-0.5 w-4 h-4 accent-[#1E4D40] rounded">
+                                    <span class="text-xs text-slate-700 leading-relaxed">
+                                        <strong class="text-[#1E293B]">符合自住滿 6 年優惠條件</strong>（本人、配偶或未成年子女設籍並實際居住滿 6 年且無出租營業，享 <strong class="text-[#B45309]">400 萬元免稅額</strong> ＋ 超過部分 <strong class="text-[#B45309]">10%</strong> 優惠稅率）
+                                    </span>
+                                </label>
+
+                                <div class="flex flex-wrap items-center justify-between gap-2 bg-[#F9F8F6] px-3.5 py-2.5 rounded-lg border border-stone-200">
+                                    <div class="text-xs text-slate-600">
+                                        試算房地合一稅額：<strong class="text-sm text-[#B45309] num-font ml-1"><span id="disp-cgt-tax">58.5</span> 萬元</strong>
+                                    </div>
+                                    <label class="inline-flex items-center gap-1.5 text-xs font-bold text-[#1E4D40] cursor-pointer">
+                                        <input type="checkbox" id="tax-include-in-net" checked onchange="recalcAll()" class="w-4 h-4 accent-[#1E4D40] rounded">
+                                        <span>帶入右側結算明細扣除</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div id="tax-old-note" class="hidden text-xs text-slate-600 bg-[#F9F8F6] p-3 rounded-lg border border-stone-200 leading-relaxed">
+                                <strong>舊制說明：</strong>2015/12/31 前取得者，出售時僅「房屋評定現值」比例併入次年個人綜合所得稅申報（不在交屋當下直接扣款），故交屋結算明細中房地合一稅為 0 萬元。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column (5 cols): Sticky High-Craft Financial Statement Card -->
+                <div class="lg:col-span-5 lg:sticky lg:top-28 bg-white rounded-2xl border border-[#E6E4DF] shadow-sm overflow-hidden print-card">
+                    <!-- Top Hero KPI Block -->
+                    <div class="bg-[#1E4D40] text-white p-5 sm:p-6">
+                        <div class="flex items-center justify-between text-xs text-emerald-200 mb-2">
+                            <span class="font-semibold tracking-wider uppercase flex items-center gap-1.5">
+                                <i class="fa-solid fa-file-invoice"></i> 2030 售屋交屋結算明細表
+                            </span>
+                            <span class="px-2 py-0.5 rounded bg-white/15 text-white num-font">43.0 坪</span>
+                        </div>
+
+                        <div class="mt-3">
+                            <div class="text-xs text-emerald-100/90">預估交屋實拿淨現金（扣除仲介、稅費與原房貸）</div>
+                            <div class="text-3xl sm:text-4xl font-bold text-amber-300 num-font tracking-tight mt-1">
+                                <span id="out-net-cash">3,236.3</span> <span class="text-sm font-normal text-emerald-100">萬元</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-3.5 pt-3 border-t border-white/15 flex items-center justify-between text-xs">
+                            <span class="text-emerald-100/90">扣仲介費後實拿（未扣房貸與稅費）</span>
+                            <span class="font-bold text-white num-font"><span id="out-after-comm">3,336.8</span> 萬元</span>
+                        </div>
+                    </div>
+
+                    <!-- Itemized Financial Statement Breakdown -->
+                    <div class="p-5 sm:p-6 space-y-3 text-xs sm:text-sm">
+                        <div class="flex items-baseline justify-between py-1">
+                            <div>
+                                <div class="font-bold text-slate-800">預估成交總價</div>
+                                <div class="text-[11px] text-slate-400 num-font">43.0 坪 × <span id="stmt-unit-price">80.0</span> 萬/坪</div>
+                            </div>
+                            <div class="text-base font-bold text-slate-900 num-font">
+                                <span id="out-gross-price">3,440.0</span> <span class="text-xs font-normal text-slate-500">萬元</span>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-dashed border-stone-200 my-1"></div>
+
+                        <div class="flex items-center justify-between py-1 text-slate-600">
+                            <span>減：仲介服務費（<span id="out-comm-rate-lbl" class="num-font">3.0</span>%）</span>
+                            <span class="font-semibold text-rose-700 num-font">- <span id="out-comm-fee">103.2</span> 萬元</span>
+                        </div>
+
+                        <div class="flex items-center justify-between py-1 text-slate-600">
+                            <span>減：原房貸剩餘本金</span>
+                            <span class="font-semibold text-slate-700 num-font">- <span id="out-rem-mortgage">0.0</span> 萬元</span>
+                        </div>
+
+                        <div class="flex items-baseline justify-between py-1 text-slate-600">
+                            <div>
+                                <span>減：土地增值稅與房地合一稅</span>
+                                <span class="block text-[11px] text-slate-400 num-font" id="stmt-tax-detail">土增稅 40.0 萬 ＋ 房地合一稅 58.5 萬</span>
+                            </div>
+                            <span class="font-semibold text-slate-700 num-font shrink-0">- <span id="out-total-taxes">98.5</span> 萬元</span>
+                        </div>
+
+                        <div class="flex items-center justify-between py-1 text-slate-600">
+                            <span>減：代書塗銷與履保規費</span>
+                            <span class="font-semibold text-slate-700 num-font">- <span id="out-misc-fee">2.0</span> 萬元</span>
+                        </div>
+
+                        <!-- Thick Divider Summary -->
+                        <div class="pt-3 mt-2 border-t-2 border-slate-800 flex items-baseline justify-between">
+                            <div>
+                                <span class="text-sm font-bold text-[#1E293B]">預估交屋實拿淨現金</span>
+                                <span class="block text-[11px] text-[#1E4D40]">已同步帶入第 3 區塊換屋資金池</span>
+                            </div>
+                            <div class="text-xl font-bold text-[#1E4D40] num-font">
+                                <span id="stmt-net-cash">3,236.3</span> <span class="text-xs font-normal">萬元</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-2 no-print">
+                            <a href="#sec-mortgage" class="w-full py-2.5 px-4 rounded-xl bg-[#F9F8F6] hover:bg-stone-100 border border-stone-200 text-xs font-bold text-[#1E4D40] flex items-center justify-center gap-1.5 transition">
+                                <span>前往第 3 區塊試算 2031 新屋貸款與尾款</span>
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compact 3-Scenario Reference Table -->
+            <div class="bg-white rounded-2xl border border-[#E6E4DF] px-5 sm:px-6 py-4 shadow-sm print-card">
+                <div class="text-xs font-bold text-slate-600 mb-2.5">2030 年三種市場走勢快速對照表（43 坪純主建＋公設）：</div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-xs">
+                        <thead>
+                            <tr class="border-b border-[#E6E4DF] text-slate-500">
+                                <th class="py-2 pr-3 font-semibold">市場情境</th>
+                                <th class="py-2 px-3 font-semibold text-right">預估單價</th>
+                                <th class="py-2 px-3 font-semibold text-right">預估成交總價</th>
+                                <th class="py-2 px-3 font-semibold text-right">扣 3% 仲介費後</th>
+                                <th class="py-2 pl-3 font-semibold text-right">扣 4% 仲介費後</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-[#E6E4DF] num-font text-slate-700">
+                            <tr>
+                                <td class="py-2 pr-3 font-semibold">保守持平</td>
+                                <td class="py-2 px-3 text-right">73.0 萬/坪</td>
+                                <td class="py-2 px-3 text-right font-semibold">3,139.0 萬</td>
+                                <td class="py-2 px-3 text-right">3,044.8 萬</td>
+                                <td class="py-2 pl-3 text-right">3,013.4 萬</td>
+                            </tr>
+                            <tr class="bg-[#1E4D40]/5 font-bold text-[#1E4D40]">
+                                <td class="py-2 pr-3">穩健基準（推薦）</td>
+                                <td class="py-2 px-3 text-right">80.0 萬/坪</td>
+                                <td class="py-2 px-3 text-right">3,440.0 萬</td>
+                                <td class="py-2 px-3 text-right">3,336.8 萬</td>
+                                <td class="py-2 pl-3 text-right">3,302.4 萬</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 pr-3 font-semibold">樂觀景氣</td>
+                                <td class="py-2 px-3 text-right">86.0 萬/坪</td>
+                                <td class="py-2 px-3 text-right font-semibold">3,698.0 萬</td>
+                                <td class="py-2 px-3 text-right">3,587.1 萬</td>
+                                <td class="py-2 pl-3 text-right">3,550.1 萬</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 2: DUAL RED-LINE TIMELINE                         -->
+        <!-- ========================================================= -->
+        <section id="sec-timeline" class="scroll-mt-28 space-y-5">
+            <div>
+                <span class="text-xs font-bold tracking-wider uppercase text-[#B45309]">SECTION 02</span>
+                <h3 class="text-lg sm:text-xl font-bold text-[#1E293B]">2. 2030 賣舊屋 ＋ 2031 預售屋交屋「雙重財務紅線」互動時間軸</h3>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-[#E6E4DF] p-5 sm:p-7 shadow-sm space-y-6 print-card">
+                <!-- Interactive Target Handover Month Selector -->
+                <div class="flex flex-wrap items-center justify-between gap-4 bg-[#F9F8F6] p-4 rounded-xl border border-[#E6E4DF]">
+                    <div>
+                        <label for="tl-handover-month" class="block text-sm font-bold text-[#1E293B]">
+                            設定 2031 年預售屋預計交屋（所有權移轉登記）年月：
+                        </label>
+                        <p class="text-xs text-slate-500 mt-0.5">國稅局重購退稅與銀行第二戶限貸解除皆以「過戶登記日」為基準計算</p>
+                    </div>
+                    <input type="month" id="tl-handover-month" value="2031-06" onchange="updateTimeline()" class="px-3.5 py-2 rounded-lg border border-[#1E4D40] bg-white text-sm font-bold num-font text-[#1E4D40] focus:outline-none">
+                </div>
+
+                <!-- Visual Milestone Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Milestone 1: Tax Refund 2-Year Window -->
+                    <div class="rounded-xl border border-emerald-200 bg-emerald-50/50 p-4 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#1E4D40] text-white">紅線一：重購退稅 2 年期限</span>
+                            <i class="fa-solid fa-shield-halved text-[#1E4D40]"></i>
+                        </div>
+                        <div class="text-base font-bold text-[#1E293B] num-font pt-1" id="tl-tax-window">
+                            2029年06月 ～ 2031年06月
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            萬隆舊屋的買賣移轉登記日須在預售屋交屋日前推 <strong>24 個月內</strong>（若先交屋後賣屋亦為 2 年內），且兩屋皆符合自用住宅，即可申請全額或比例退回土增稅與房地合一稅。
+                        </p>
+                    </div>
+
+                    <!-- Milestone 2: Second-Home LTV Restriction Deadline -->
+                    <div class="rounded-xl border border-amber-200 bg-amber-50/60 p-4 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#B45309] text-white">紅線二：解除第二戶限貸底線</span>
+                            <i class="fa-solid fa-landmark text-[#B45309]"></i>
+                        </div>
+                        <div class="text-base font-bold text-[#1E293B] num-font pt-1" id="tl-loan-deadline">
+                            最晚 2031年02月 前完成過戶塗銷
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            預售屋約在交屋前 3～6 個月（約 <strong id="tl-bank-match" class="num-font">2030年12月～2031年03月</strong>）通知銀行對保。務必在此之前完成舊屋過戶並塗銷房貸，新屋才能恢復「名下無房貸」資格，爭取最高 8 成貸款與寬限期。
+                        </p>
+                    </div>
+
+                    <!-- Milestone 3: Leaseback & Hukou Order -->
+                    <div class="rounded-xl border border-[#E6E4DF] bg-[#F9F8F6] p-4 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-700 text-white">銜接關鍵：售後回租與戶籍</span>
+                            <i class="fa-solid fa-people-roof text-slate-700"></i>
+                        </div>
+                        <div class="text-base font-bold text-[#1E293B] num-font pt-1" id="tl-leaseback-window">
+                            建議 2030年中 售出並回租至交屋
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            簽約時可協商交屋後<strong>售後回租 3～6 個月</strong>免搬兩次家。<strong>戶籍遷徙順序：</strong>務必等舊屋完成過戶登記後，再將戶籍遷入 2031 新屋，避免中斷自用住宅資格。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 3: 2031 PRESALE MORTGAGE & MONTHLY PAYMENT        -->
+        <!-- ========================================================= -->
+        <section id="sec-mortgage" class="scroll-mt-28 space-y-5">
+            <div class="flex flex-wrap items-end justify-between gap-2">
+                <div>
+                    <span class="text-xs font-bold tracking-wider uppercase text-[#B45309]">SECTION 03</span>
+                    <h3 class="text-lg sm:text-xl font-bold text-[#1E293B]">3. 2031 預售屋資金結算（含目前已繳款項明細、自由貸款成數）與月繳款預估</h3>
+                </div>
+                <p class="text-xs text-slate-500">結合第 1 區塊售屋淨實拿現金，自動精算交屋需補尾款與交屋後可動用餘裕</p>
+            </div>
+
+            <!-- Step A: Pre-sale Total Price + Itemized Already-Paid Breakdown + Free LTV -->
+            <div class="bg-white rounded-2xl border border-[#E6E4DF] p-5 sm:p-7 shadow-sm space-y-6 print-card">
+                <!-- Top Row: Pre-sale Total Price & Free LTV Adjustment -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                    <!-- Pre-sale Total Price (Slider + Direct Numeric Input) -->
+                    <div class="bg-[#F9F8F6] p-4 sm:p-5 rounded-xl border border-[#E6E4DF]">
+                        <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
+                            <label for="mtg-presale-price" class="text-xs sm:text-sm font-bold text-slate-700">2031 新買預售屋總價</label>
+                            <div class="flex items-center gap-1.5">
+                                <input type="number" id="mtg-presale-price-num" min="1000" max="10000" step="10" value="3800" oninput="syncPresaleFromInput()" class="w-28 px-2.5 py-1 rounded-lg border border-[#1E4D40] bg-white text-right text-base font-bold text-[#1E4D40] num-font focus:outline-none">
+                                <span class="text-xs sm:text-sm font-bold text-[#1E4D40]">萬元</span>
+                            </div>
+                        </div>
+                        <input type="range" id="mtg-presale-price" min="1000" max="8000" step="50" value="3800" oninput="syncPresaleFromSlider()" class="w-full my-2 no-print">
+                        <div class="flex justify-between text-[10px] text-slate-400 num-font">
+                            <span>1,000萬</span>
+                            <span>3,800萬</span>
+                            <span>5,500萬</span>
+                            <span>8,000萬</span>
+                        </div>
+                    </div>
+
+                    <!-- Free Loan-to-Value Ratio Adjustment (Slider + Direct Numeric Input + Presets) -->
+                    <div class="bg-[#F9F8F6] p-4 sm:p-5 rounded-xl border border-[#E6E4DF]">
+                        <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
+                            <label for="mtg-ltv-slider" class="text-xs sm:text-sm font-bold text-slate-700">預計銀行貸款成數（自由調整）</label>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-semibold text-slate-500 num-font">貸款 <strong id="disp-ltv-loan-wan" class="text-[#1E4D40]">3,040.0</strong> 萬</span>
+                                <div class="flex items-center gap-1">
+                                    <input type="number" id="mtg-ltv-num" min="0" max="85" step="0.5" value="80" oninput="syncLTVFromInput()" class="w-20 px-2 py-1 rounded-lg border border-[#B45309] bg-white text-right text-base font-bold text-[#B45309] num-font focus:outline-none">
+                                    <span class="text-xs sm:text-sm font-bold text-[#B45309]">%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="range" id="mtg-ltv-slider" min="0" max="85" step="0.5" value="80" oninput="syncLTVFromSlider()" class="w-full my-2 no-print">
+                        <div class="flex flex-wrap gap-1.5 mt-1 no-print">
+                            <button type="button" onclick="setLTV(80)" class="px-2.5 py-1 text-[11px] font-semibold rounded-md border border-[#E6E4DF] bg-white hover:border-[#1E4D40] text-slate-700 transition">80% 首購滿貸</button>
+                            <button type="button" onclick="setLTV(75)" class="px-2.5 py-1 text-[11px] font-semibold rounded-md border border-[#E6E4DF] bg-white hover:border-[#1E4D40] text-slate-700 transition">75%</button>
+                            <button type="button" onclick="setLTV(70)" class="px-2.5 py-1 text-[11px] font-semibold rounded-md border border-[#E6E4DF] bg-white hover:border-[#1E4D40] text-slate-700 transition">70%</button>
+                            <button type="button" onclick="setLTV(60)" class="px-2.5 py-1 text-[11px] font-semibold rounded-md border border-[#E6E4DF] bg-white hover:border-[#1E4D40] text-slate-700 transition">60%</button>
+                            <button type="button" onclick="setLTV(50)" class="px-2.5 py-1 text-[11px] font-semibold rounded-md border border-[#E6E4DF] bg-white hover:border-[#1E4D40] text-slate-700 transition">50% 第二戶限貸</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Itemized Already-Paid Breakdown Table -->
+                <div class="border border-[#E6E4DF] rounded-xl overflow-hidden">
+                    <div class="bg-[#F9F8F6] px-4 py-3 border-b border-[#E6E4DF] flex flex-wrap items-center justify-between gap-2">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-receipt text-[#1E4D40]"></i>
+                            <h4 class="text-xs sm:text-sm font-bold text-[#1E293B]">目前已繳款項明細（2031 預售屋已投入自備款）</h4>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-xs font-bold text-[#1E4D40] num-font">
+                                已繳合計：<span id="disp-paid-total" class="text-sm sm:text-base">850.0</span> 萬元（佔總價 <span id="disp-paid-pct">22.4</span>%）
+                            </span>
+                            <button type="button" onclick="addPaidRow()" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-[#1E4D40] hover:bg-[#15382E] text-white transition flex items-center gap-1 no-print">
+                                <i class="fa-solid fa-plus"></i>
+                                <span>新增已繳款項</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                            <thead>
+                                <tr class="bg-slate-50/70 border-b border-[#E6E4DF] text-slate-500 text-xs">
+                                    <th class="py-2.5 px-3 sm:px-4 w-12 text-center font-semibold">計入</th>
+                                    <th class="py-2.5 px-3 font-semibold">款項名稱 / 期別說明</th>
+                                    <th class="py-2.5 px-3 w-40 sm:w-48 text-right font-semibold">已繳金額 (萬元)</th>
+                                    <th class="py-2.5 px-3 w-24 text-right font-semibold hidden sm:table-cell">佔總價比</th>
+                                    <th class="py-2.5 px-3 w-14 text-center font-semibold no-print">刪除</th>
+                                </tr>
+                            </thead>
+                            <tbody id="paid-items-tbody" class="divide-y divide-[#E6E4DF]">
+                                <!-- Populated via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Handover Cash Flow & Settlement Equation Summary -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch">
+                    <!-- Formula Breakdown (7 cols) -->
+                    <div class="lg:col-span-7 bg-[#F9F8F6] rounded-xl border border-[#E6E4DF] p-4 sm:p-5 flex flex-col justify-between space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-700">2031 交屋需補尾款（剩餘自備款）試算公式：</span>
+                            <span class="text-[11px] text-slate-500">總價 − 已繳款項 − 銀行貸款</span>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center num-font">
+                            <div class="bg-white p-2.5 rounded-lg border border-[#E6E4DF]">
+                                <div class="text-[11px] text-slate-500">預售屋總價</div>
+                                <div class="text-sm sm:text-base font-bold text-slate-800 mt-0.5"><span id="eq-total-price">3,800.0</span> 萬</div>
+                            </div>
+                            <div class="bg-white p-2.5 rounded-lg border border-[#E6E4DF]">
+                                <div class="text-[11px] text-slate-500">− 目前已繳合計</div>
+                                <div class="text-sm sm:text-base font-bold text-[#1E4D40] mt-0.5">- <span id="eq-paid-sum">850.0</span> 萬</div>
+                            </div>
+                            <div class="bg-white p-2.5 rounded-lg border border-[#E6E4DF]">
+                                <div class="text-[11px] text-slate-500">− 銀行貸款 (<span id="eq-ltv-lbl">80</span>%)</div>
+                                <div class="text-sm sm:text-base font-bold text-[#1E4D40] mt-0.5">- <span id="eq-loan-sum">3,040.0</span> 萬</div>
+                            </div>
+                            <div class="bg-amber-50 p-2.5 rounded-lg border border-amber-200">
+                                <div class="text-[11px] font-semibold text-[#B45309]">= 交屋需補尾款</div>
+                                <div class="text-sm sm:text-base font-bold text-[#B45309] mt-0.5"><span id="eq-balance-due">0.0</span> 萬</div>
+                            </div>
+                        </div>
+                        <div id="eq-overfund-note" class="hidden text-xs text-[#1E4D40] bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+                            <i class="fa-solid fa-circle-info mr-1"></i>
+                            目前「已繳款項＋銀行貸款」已超過預售屋總價 <strong id="eq-overfund-amt" class="num-font">90.0</strong> 萬元（代表交屋時無需再補自備款，甚至可調降貸款成數以減少每月利息負擔）。
+                        </div>
+                    </div>
+
+                    <!-- Net Cash Flow Comparison Box (5 cols) -->
+                    <div id="settlement-result-card" class="lg:col-span-5 rounded-xl p-4 sm:p-5 border-2 border-[#1E4D40] bg-[#1E4D40]/5 flex flex-col justify-between">
+                        <div class="space-y-1.5">
+                            <div class="flex items-center justify-between text-xs text-slate-600 num-font">
+                                <span>第 1 區塊售屋預估淨實拿現金：</span>
+                                <strong class="text-[#1E4D40]" id="settle-sale-net">3,236.3 萬元</strong>
+                            </div>
+                            <div class="flex items-center justify-between text-xs text-slate-600 num-font">
+                                <span>扣除 2031 交屋需補尾款：</span>
+                                <strong class="text-slate-800" id="settle-balance-due">- 0.0 萬元</strong>
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-[#E6E4DF]">
+                            <div id="settle-status-label" class="text-xs font-bold text-[#1E4D40]">
+                                交屋後剩餘可動用現金（裝潢＋家具＋家庭預備金）
+                            </div>
+                            <div id="settle-final-amount" class="text-2xl sm:text-3xl font-bold text-[#1E4D40] num-font mt-0.5">
+                                + 3,236.3 <span class="text-xs font-normal">萬元</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step B: Monthly Mortgage Payment Estimator -->
+            <div class="bg-white rounded-2xl border border-[#E6E4DF] shadow-sm overflow-hidden print-card">
+                <div class="p-5 sm:p-7 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
+                    <!-- Left Inputs (7 cols) -->
+                    <div class="lg:col-span-7 space-y-5">
+                        <div class="flex items-center justify-between border-b border-[#E6E4DF] pb-2.5">
+                            <h4 class="text-sm font-bold text-[#1E293B]">2031 新屋房貸月繳款參數設定</h4>
+                            <span class="text-xs text-slate-500 num-font">試算本金：<strong id="mtg-sub-loan-wan" class="text-[#1E4D40]">3,040.0</strong> 萬元</span>
+                        </div>
+
+                        <!-- Loan Term (20 / 30 / 40 Pills + Custom Years Input) & Grace Period -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <div class="flex items-center justify-between mb-1.5">
+                                    <label class="text-xs font-bold text-slate-700">貸款年期（預設或自訂）</label>
+                                    <div class="flex items-center gap-1">
+                                        <input type="number" id="mtg-term-num" min="5" max="40" step="1" value="30" oninput="syncTermFromInput()" class="w-14 px-1.5 py-0.5 rounded border border-[#E6E4DF] bg-white text-right text-xs font-bold text-[#1E4D40] num-font focus:outline-none focus:border-[#1E4D40]">
+                                        <span class="text-xs font-bold text-slate-600">年</span>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <button type="button" onclick="setTerm(20)" id="btn-term-20" class="term-btn py-2 text-xs font-bold rounded-xl border border-[#E6E4DF] bg-[#F9F8F6] text-slate-700 hover:border-[#1E4D40] transition">20 年</button>
+                                    <button type="button" onclick="setTerm(30)" id="btn-term-30" class="term-btn py-2 text-xs font-bold rounded-xl border-2 border-[#1E4D40] bg-[#1E4D40] text-white transition">30 年</button>
+                                    <button type="button" onclick="setTerm(40)" id="btn-term-40" class="term-btn py-2 text-xs font-bold rounded-xl border border-[#E6E4DF] bg-[#F9F8F6] text-slate-700 hover:border-[#1E4D40] transition">40 年</button>
+                                </div>
+                                <input type="hidden" id="mtg-term" value="30">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1.5">寬限期（只繳息不還本）</label>
+                                <div class="grid grid-cols-4 gap-1.5">
+                                    <button type="button" onclick="setGrace(0)" id="btn-grace-0" class="grace-btn py-2 text-xs font-bold rounded-xl border border-[#E6E4DF] bg-[#F9F8F6] text-slate-700 hover:border-[#1E4D40] transition">0 年</button>
+                                    <button type="button" onclick="setGrace(2)" id="btn-grace-2" class="grace-btn py-2 text-xs font-bold rounded-xl border border-[#E6E4DF] bg-[#F9F8F6] text-slate-700 hover:border-[#1E4D40] transition">2 年</button>
+                                    <button type="button" onclick="setGrace(3)" id="btn-grace-3" class="grace-btn py-2 text-xs font-bold rounded-xl border-2 border-[#1E4D40] bg-[#1E4D40] text-white transition">3 年</button>
+                                    <button type="button" onclick="setGrace(5)" id="btn-grace-5" class="grace-btn py-2 text-xs font-bold rounded-xl border border-[#E6E4DF] bg-[#F9F8F6] text-slate-700 hover:border-[#1E4D40] transition">5 年</button>
+                                </div>
+                                <input type="hidden" id="mtg-grace" value="3">
+                            </div>
+                        </div>
+
+                        <!-- Interest Rate Slider + Direct Numeric Input -->
+                        <div class="bg-[#F9F8F6] p-4 rounded-xl border border-[#E6E4DF]">
+                            <div class="flex justify-between items-center mb-1.5">
+                                <label for="mtg-rate" class="text-xs sm:text-sm font-bold text-slate-700">貸款年利率 (%)</label>
+                                <div class="flex items-center gap-1">
+                                    <input type="number" id="mtg-rate-num" min="1.00" max="5.00" step="0.05" value="2.25" oninput="syncRateFromInput()" class="w-20 px-2 py-0.5 rounded-lg border border-[#1E4D40] bg-white text-right text-sm font-bold text-[#1E4D40] num-font focus:outline-none">
+                                    <span class="text-xs font-bold text-[#1E4D40]">%</span>
+                                </div>
+                            </div>
+                            <input type="range" id="mtg-rate" min="1.50" max="3.50" step="0.05" value="2.25" oninput="syncRateFromSlider()" class="w-full my-2 no-print">
+                            <div class="flex justify-between text-[10px] text-slate-400 num-font">
+                                <span>1.50%</span>
+                                <span>2.15%(優惠)</span>
+                                <span>2.25%(基準)</span>
+                                <span>2.80%</span>
+                                <span>3.50%</span>
+                            </div>
+                        </div>
+
+                        <!-- Repayment Method & Household Income -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="mtg-method" class="block text-xs font-bold text-slate-700 mb-1">還款方式</label>
+                                <select id="mtg-method" onchange="recalcMortgage()" class="w-full px-3 py-2 rounded-lg border border-[#E6E4DF] bg-white text-xs sm:text-sm font-semibold text-slate-800">
+                                    <option value="pi" selected>本息平均攤還（每月固定）</option>
+                                    <option value="p">本金平均攤還（首期最高、逐月遞減）</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="mtg-income" class="block text-xs font-bold text-slate-700 mb-1">家庭月收入（選填，用於收支比評估）</label>
+                                <div class="relative">
+                                    <input type="number" id="mtg-income" value="20" min="1" step="1" oninput="recalcMortgage()" class="w-full pl-3 pr-12 py-2 rounded-lg border border-[#E6E4DF] bg-white text-sm font-bold num-font text-slate-800">
+                                    <span class="absolute right-3 top-2.5 text-xs text-slate-400">萬/月</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Result Cards (5 cols) -->
+                    <div class="lg:col-span-5 flex flex-col justify-between bg-[#1E4D40] text-white rounded-2xl p-5 sm:p-6">
+                        <div class="space-y-3.5">
+                            <div class="flex items-center justify-between border-b border-white/15 pb-3">
+                                <span class="text-xs font-semibold tracking-wider uppercase text-emerald-200">2031 新屋房貸月繳預估</span>
+                                <span class="text-xs px-2.5 py-0.5 rounded-full bg-white/15 text-white num-font" id="mtg-badge-summary">30年期 · 2.25%</span>
+                            </div>
+
+                            <!-- Loan & Already Paid Summary -->
+                            <div class="grid grid-cols-2 gap-2.5">
+                                <div class="bg-white/10 rounded-xl p-3 border border-white/10">
+                                    <div class="text-[11px] text-emerald-100">預估貸款總額 (<span id="out-ltv-pct-lbl">80</span>%)</div>
+                                    <div class="text-lg sm:text-xl font-bold text-white num-font mt-0.5"><span id="out-loan-total">3,040.0</span> <span class="text-xs font-normal">萬</span></div>
+                                </div>
+                                <div class="bg-white/10 rounded-xl p-3 border border-white/10">
+                                    <div class="text-[11px] text-emerald-100">交屋需補尾款</div>
+                                    <div class="text-lg sm:text-xl font-bold text-white num-font mt-0.5"><span id="out-down-payment">0.0</span> <span class="text-xs font-normal">萬</span></div>
+                                </div>
+                            </div>
+
+                            <!-- Grace Period Monthly -->
+                            <div class="bg-white/10 rounded-xl p-3 border border-white/10">
+                                <div class="flex justify-between items-center text-[11px] text-emerald-100">
+                                    <span id="out-grace-label">寬限期內（第 1 ～ 3 年）每月繳款</span>
+                                    <span>只繳息不還本</span>
+                                </div>
+                                <div class="text-xl font-bold text-white num-font mt-0.5" id="out-grace-payment">
+                                    57,000 <span class="text-xs font-normal text-emerald-200">元 / 月</span>
+                                </div>
+                            </div>
+
+                            <!-- Post-Grace Monthly Payment -->
+                            <div class="bg-[#13332A] rounded-xl p-4 border border-amber-400/40 shadow-inner">
+                                <div class="flex justify-between items-center text-xs text-amber-300 font-semibold">
+                                    <span id="out-post-grace-label">寬限期後（第 4 ～ 30 年）每月繳款</span>
+                                </div>
+                                <div class="text-3xl font-bold text-amber-300 num-font tracking-tight mt-1">
+                                    <span id="out-post-grace-payment">125,280</span> <span class="text-xs font-normal text-emerald-100">元 / 月</span>
+                                </div>
+                                <div id="out-p-range-note" class="hidden text-[11px] text-emerald-200 mt-1 num-font">
+                                    首月最高 <span id="out-p-first">0</span> 元 ～ 末月降至 <span id="out-p-last">0</span> 元
+                                </div>
+                                <div class="mt-2.5 pt-2.5 border-t border-white/10 flex justify-between items-center text-xs num-font">
+                                    <span class="text-emerald-100">全期總利息支出：<strong class="text-white" id="out-total-interest">1,224.3</strong> 萬</span>
+                                    <span id="out-dti-pill" class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-amber-400/20 text-amber-300">收支比 62.6%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 20 / 30 / 40 Year Comparison Table & Visual Principal/Interest Bar -->
+                <div class="border-t border-[#E6E4DF] bg-[#F9F8F6] p-5 sm:p-7 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    <div class="lg:col-span-7 overflow-x-auto">
+                        <div class="text-xs font-bold text-slate-700 mb-2">20 年 / 30 年 / 40 年期貸款方案一覽比較表：</div>
+                        <table class="w-full text-left border-collapse text-xs bg-white rounded-xl overflow-hidden border border-[#E6E4DF]">
+                            <thead>
+                                <tr class="bg-slate-100/80 border-b border-[#E6E4DF] text-slate-600">
+                                    <th class="py-2.5 px-3 font-bold">貸款年期</th>
+                                    <th class="py-2.5 px-3 font-bold text-right">寬限期後月繳</th>
+                                    <th class="py-2.5 px-3 font-bold text-right">全期總利息</th>
+                                    <th class="py-2.5 px-3 font-bold text-right">收支比</th>
+                                </tr>
+                            </thead>
+                            <tbody id="mtg-term-tbody" class="divide-y divide-[#E6E4DF] num-font">
+                                <!-- Populated via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Visual Principal vs Interest Structure Bar (SVG/CSS) -->
+                    <div class="lg:col-span-5 bg-white p-4 rounded-xl border border-[#E6E4DF] space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-[#1E293B]">還款總額本息結構視覺圖</span>
+                            <span class="text-[11px] text-slate-500 num-font">總還款 <strong id="vis-total-repay" class="text-slate-800">4,264.3</strong> 萬</span>
+                        </div>
+                        <div class="w-full h-5 rounded-full overflow-hidden flex bg-slate-100 border border-[#E6E4DF]">
+                            <div id="vis-principal-bar" class="bg-[#1E4D40] h-full transition-all duration-300" style="width: 71.3%"></div>
+                            <div id="vis-interest-bar" class="bg-[#B45309] h-full transition-all duration-300" style="width: 28.7%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs num-font">
+                            <div class="flex items-center gap-1.5">
+                                <span class="w-2.5 h-2.5 rounded-sm bg-[#1E4D40]"></span>
+                                <span class="text-slate-600">貸款本金：<strong class="text-slate-800" id="vis-principal-pct">71.3%</strong></span>
+                            </div>
+                            <div class="flex items-center gap-1.5">
+                                <span class="w-2.5 h-2.5 rounded-sm bg-[#B45309]"></span>
+                                <span class="text-slate-600">總利息：<strong class="text-slate-800" id="vis-interest-pct">28.7%</strong></span>
+                            </div>
+                        </div>
+                        <p class="text-[11px] text-slate-500 leading-relaxed pt-1 border-t border-[#E6E4DF]">
+                            若條件允許申辦 <strong>40 年期</strong>房貸，可大幅降低每月剛性現金流壓力，未來手頭有餘裕時仍可隨時部分提前還款。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 4: PHASED ACTION CHECKLIST                        -->
+        <!-- ========================================================= -->
+        <section id="sec-checklist" class="scroll-mt-28 space-y-5">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <div>
+                    <span class="text-xs font-bold tracking-wider uppercase text-[#B45309]">SECTION 04</span>
+                    <h3 class="text-lg sm:text-xl font-bold text-[#1E293B]">4. 分階段行動檢核清單（Action Checklist）</h3>
+                </div>
+                <div class="flex items-center gap-3 no-print">
+                    <span class="text-xs font-semibold text-slate-600 num-font">完成進度：<strong id="chk-progress-text" class="text-[#1E4D40]">0 / 6</strong></span>
+                    <button type="button" onclick="resetChecklist()" class="px-2.5 py-1 text-xs rounded-lg border border-[#E6E4DF] bg-white hover:bg-slate-100 text-slate-600 transition">
+                        清除勾選
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <!-- Phase 1 -->
+                <div class="bg-white rounded-2xl border border-[#E6E4DF] p-5 shadow-sm space-y-3.5 print-card">
+                    <div class="flex items-center gap-2 pb-2.5 border-b border-[#E6E4DF]">
+                        <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-[#1E4D40] text-white">階段一</span>
+                        <h4 class="text-sm font-bold text-[#1E293B]">【現在 ～ 2029 年】持有期間準備</h4>
+                    </div>
+                    <label class="flex items-start gap-2.5 cursor-pointer group">
+                        <input type="checkbox" id="chk-p1-1" onchange="saveChecklist()" class="chk-box mt-1 w-4 h-4 accent-[#1E4D40] rounded">
+                        <span class="text-xs sm:text-sm text-slate-700 leading-relaxed group-hover:text-slate-900">
+                            <strong>保全自用住宅設籍滿 6 年：</strong>確保本人、配偶或未成年子女持續設籍在萬隆舊屋，且無出租或營業行為（享房地合一稅 400 萬免稅額）。
+                        </span>
+                    </label>
+                    <label class="flex items-start gap-2.5 cursor-pointer group">
+                        <input type="checkbox" id="chk-p1-2" onchange="saveChecklist()" class="chk-box mt-1 w-4 h-4 accent-[#1E4D40] rounded">
+                        <span class="text-xs sm:text-sm text-slate-700 leading-relaxed group-hover:text-slate-900">
+                            <strong>頂樓防水維護並留存單據：</strong>16F 頂樓若有任何細微滲水或壁癌，及早請管委會修繕或施作防水層，保留發票單據可抵扣房地合一稅並避免買方大砍價。
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="bg-white rounded-2xl border border-[#E6E4DF] p-5 shadow-sm space-y-3.5 print-card">
+                    <div class="flex items-center gap-2 pb-2.5 border-b border-[#E6E4DF]">
+                        <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-[#B45309] text-white">階段二</span>
+                        <h4 class="text-sm font-bold text-[#1E293B]">【2030 年初】委託售屋前準備</h4>
+                    </div>
+                    <label class="flex items-start gap-2.5 cursor-pointer group">
+                        <input type="checkbox" id="chk-p2-1" onchange="saveChecklist()" class="chk-box mt-1 w-4 h-4 accent-[#1E4D40] rounded">
+                        <span class="text-xs sm:text-sm text-slate-700 leading-relaxed group-hover:text-slate-900">
+                            <strong>索取社區共有車位規章影本：</strong>向管委會確認新屋主過戶後可直接無縫承接月租車位及每月租金金額，帶看時直接出示給買方，化解無車位產權抗性。
+                        </span>
+                    </label>
+                    <label class="flex items-start gap-2.5 cursor-pointer group">
+                        <input type="checkbox" id="chk-p2-2" onchange="saveChecklist()" class="chk-box mt-1 w-4 h-4 accent-[#1E4D40] rounded">
+                        <span class="text-xs sm:text-sm text-slate-700 leading-relaxed group-hover:text-slate-900">
+                            <strong>協商「售後回租 3～6 個月」：</strong>若 2030 年舊屋過戶早於 2031 年預售屋交屋，簽約時於特約條款約定交屋後向新屋主回租至新屋完工，省去搬兩次家。
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="bg-white rounded-2xl border border-[#E6E4DF] p-5 shadow-sm space-y-3.5 print-card">
+                    <div class="flex items-center gap-2 pb-2.5 border-b border-[#E6E4DF]">
+                        <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-slate-800 text-white">階段三</span>
+                        <h4 class="text-sm font-bold text-[#1E293B]">【2030 中 ～ 2031 交屋】過戶與退稅</h4>
+                    </div>
+                    <label class="flex items-start gap-2.5 cursor-pointer group">
+                        <input type="checkbox" id="chk-p3-1" onchange="saveChecklist()" class="chk-box mt-1 w-4 h-4 accent-[#1E4D40] rounded">
+                        <span class="text-xs sm:text-sm text-slate-700 leading-relaxed group-hover:text-slate-900">
+                            <strong>嚴守「先賣後遷戶籍」順序：</strong>務必等萬隆舊屋完成買賣過戶登記後，再將戶籍遷入 2031 新交屋的預售屋，避免提前遷出導致舊屋喪失自用住宅優惠。
+                        </span>
+                    </label>
+                    <label class="flex items-start gap-2.5 cursor-pointer group">
+                        <input type="checkbox" id="chk-p3-2" onchange="saveChecklist()" class="chk-box mt-1 w-4 h-4 accent-[#1E4D40] rounded">
+                        <span class="text-xs sm:text-sm text-slate-700 leading-relaxed group-hover:text-slate-900">
+                            <strong>備妥單據申請重購退稅：</strong>留存舊屋買賣契約、土增稅單、房地合一稅單與新屋權狀，於 2031 年新屋所有權登記完成後，向稅捐處與國稅局申請重購退稅。
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-xs text-slate-400 pt-4 pb-8 border-t border-[#E6E4DF]">
+            <p>台北市文山區萬隆中古屋 2030 出售與 2031 換屋試算查詢手冊 · 所有試算數據自動儲存於本機瀏覽器</p>
+        </footer>
+    </main>
+
+    <script>
+        'use strict';
+        const STORAGE_KEY = 'wanlong_2030_singlepage_v2';
+        const AREA_PING = 43;
+
+        const DEFAULT_PAID_ITEMS = [
+            { id: 'paid-1', name: '訂金與簽約金 (10%)', amount: 380, included: true },
+            { id: 'paid-2', name: '開工款 (5%)', amount: 190, included: true },
+            { id: 'paid-3', name: '已繳工程期款', amount: 280, included: true },
+            { id: 'paid-4', name: '客變／其他已付款', amount: 0, included: true }
+        ];
+        const DEFAULTS = {
+            unitPrice: 80, commRate: 3, remMortgage: 0, miscFee: 2, landTax: 40,
+            regime: 'new20', holdYears: 'over10', includeCgt: true, buyCost: 2200, deductFee: 150, selfUse6Yr: true,
+            handoverMonth: '2031-06', presalePrice: 3800, ltv: 80, term: 30, grace: 3, rate: 2.25,
+            method: 'pi', income: 20, paidItems: DEFAULT_PAID_ITEMS, checklist: {}
+        };
+        const SCENARIOS = {
+            conservative: { label: '保守持平', price: 73 },
+            baseline: { label: '穩健基準', price: 80, badge: '推薦' },
+            optimistic: { label: '樂觀景氣', price: 86 }
+        };
+
+        let currentNetCash = 0;
+        let paidItems = JSON.parse(JSON.stringify(DEFAULT_PAID_ITEMS));
+        let activeScenario;
+        let saveTimer;
+
+        /* ---------- Helpers ---------- */
+        const $ = id => document.getElementById(id);
+        const setText = (id, t) => { $(id).textContent = t; };
+        const num = (id, fb = 0) => { const v = parseFloat($(id).value); return Number.isFinite(v) ? v : fb; };
+        const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+        const fmt1 = n => Number(n).toLocaleString('zh-TW', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+        const fmt0 = n => Math.round(Number(n)).toLocaleString('zh-TW');
+        const escapeHtml = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+        function toggleTaxPanel() {
+            const hidden = $('tax-panel-body').classList.toggle('hidden');
+            $('tax-chevron').style.transform = hidden ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
+
+        /* ---------- Section 1: Sale ---------- */
+        function highlightScenarioBtn(key) {
+            if (key === activeScenario) return;
+            activeScenario = key;
+            Object.entries(SCENARIOS).forEach(([k, cfg]) => {
+                const btn = $(`btn-scen-${k}`);
+                if (!btn) return;
+                const on = k === key;
+                const badge = cfg.badge
+                    ? `<span class="text-[10px] px-1.5 py-0.5 rounded ${on ? 'bg-white/20 text-white' : 'bg-emerald-100 text-[#1E4D40]'} font-semibold">${cfg.badge}</span>`
+                    : (on ? '<span class="w-2 h-2 rounded-full bg-amber-300"></span>' : '');
+                btn.className = on
+                    ? 'scen-btn text-left p-3 rounded-xl border-2 border-[#1E4D40] bg-[#1E4D40] text-white shadow-sm transition'
+                    : 'scen-btn text-left p-3 rounded-xl border border-stone-200 bg-[#F9F8F6] hover:border-[#1E4D40] transition';
+                btn.setAttribute('aria-pressed', on);
+                btn.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold ${on ? 'text-emerald-100' : 'text-slate-700'}">${cfg.label}</span>${badge}
+                    </div>
+                    <div class="text-sm sm:text-base font-bold ${on ? 'text-white' : 'text-[#1E293B]'} num-font mt-0.5">${cfg.price} 萬<span class="text-[11px] font-normal ${on ? 'text-emerald-200' : 'text-slate-500'}">/坪</span></div>
+                    <div class="text-[11px] ${on ? 'text-emerald-100/90' : 'text-slate-500'} num-font mt-0.5">總價 ${fmt0(cfg.price * AREA_PING)} 萬</div>`;
+            });
+        }
+
+        function matchScenarioHighlight(price) {
+            const key = Object.keys(SCENARIOS).find(k => Math.abs(SCENARIOS[k].price - price) < 0.001) || null;
+            highlightScenarioBtn(key);
+        }
+
+        function applySaleScenario(unitPrice, key) {
+            $('sale-unit-price').value = unitPrice;
+            $('sale-unit-price-num').value = Number(unitPrice).toFixed(1);
+            highlightScenarioBtn(key);
+            recalcAll();
+        }
+
+        function syncUnitPriceFromSlider() {
+            const v = num('sale-unit-price', 80);
+            $('sale-unit-price-num').value = v.toFixed(1);
+            matchScenarioHighlight(v);
+            recalcAll();
+        }
+        function syncUnitPriceFromInput() {
+            const v = parseFloat($('sale-unit-price-num').value);
+            if (Number.isFinite(v)) { $('sale-unit-price').value = clamp(v, 50, 120); matchScenarioHighlight(v); }
+            recalcAll();
+        }
+        function syncCommRateFromSlider() {
+            $('sale-comm-rate-num').value = num('sale-comm-rate', 3).toFixed(1);
+            recalcAll();
+        }
+        function syncCommRateFromInput() {
+            const v = parseFloat($('sale-comm-rate-num').value);
+            if (Number.isFinite(v)) $('sale-comm-rate').value = clamp(v, 1, 4);
+            recalcAll();
+        }
+
+        function recalcAll() {
+            const unitPrice = Math.max(0, num('sale-unit-price-num', 80));
+            const commRate = clamp(num('sale-comm-rate-num', 3), 0, 100);
+            const remMortgage = Math.max(0, num('sale-mortgage-rem'));
+            const miscFee = Math.max(0, num('sale-misc-fee'));
+            const landTax = Math.max(0, num('tax-land-val'));
+
+            const grossPrice = unitPrice * AREA_PING;
+            const commFee = grossPrice * commRate / 100;
+            const afterComm = grossPrice - commFee;
+
+            const isNew = $('tax-regime').value === 'new20';
+            const includeCgt = $('tax-include-in-net').checked;
+            const self6 = $('tax-self-use-6yr').checked;
+            $('tax-new20-fields').classList.toggle('hidden', !isNew);
+            $('tax-hold-years-wrap').classList.toggle('hidden', !isNew);
+            $('tax-old-note').classList.toggle('hidden', isNew);
+            $('tax-hold-years').disabled = self6;                       // 自住優惠採 10%，持有年數選項不適用
+            $('tax-hold-years-wrap').classList.toggle('opacity-50', self6);
+
+            let cgtTax = 0;
+            if (isNew) {
+                const rawGain = Math.max(0, grossPrice - Math.max(0, num('tax-buy-cost')) - Math.max(0, num('tax-deduct-fee')) - commFee - miscFee);
+                if (self6) {
+                    cgtTax = Math.max(0, rawGain - 400) * 0.10;
+                } else {
+                    const rateMap = { over10: 0.15, '5to10': 0.20, '2to5': 0.35 };
+                    cgtTax = rawGain * (rateMap[$('tax-hold-years').value] || 0.15);
+                }
+                setText('disp-cgt-tax', fmt1(cgtTax));
+                setText('tax-summary-pill', includeCgt ? `預估房地合一稅 ${fmt1(cgtTax)} 萬` : `試算 ${fmt1(cgtTax)} 萬（未計入）`);
+            } else {
+                setText('tax-summary-pill', '舊制（交屋免扣房地合一稅）');
+            }
+
+            const appliedCgt = (isNew && includeCgt) ? cgtTax : 0;
+            const totalTax = landTax + appliedCgt;
+            const netCash = Math.max(0, afterComm - totalTax - miscFee - remMortgage);
+            currentNetCash = netCash;
+
+            setText('stmt-unit-price', unitPrice.toFixed(1));
+            setText('out-gross-price', fmt1(grossPrice));
+            setText('out-comm-fee', fmt1(commFee));
+            setText('out-comm-rate-lbl', commRate.toFixed(1));
+            setText('out-after-comm', fmt1(afterComm));
+            setText('out-net-cash', fmt1(netCash));
+            setText('stmt-net-cash', fmt1(netCash));
+            setText('out-total-taxes', fmt1(totalTax));
+            setText('stmt-tax-detail', `土增稅 ${fmt1(landTax)} 萬 ＋ 房地合一稅 ${fmt1(appliedCgt)} 萬`);
+            setText('out-misc-fee', fmt1(miscFee));
+            setText('out-rem-mortgage', fmt1(remMortgage));
+
+            recalcMortgage(true);
+            scheduleSave();
+        }
+
+        /* ---------- Section 2: Timeline ---------- */
+        const shiftYM = (y, m, d) => { const t = y * 12 + (m - 1) + d; return { y: Math.floor(t / 12), m: (t % 12) + 1 }; };
+        const fmtYM = o => `${o.y}年${String(o.m).padStart(2, '0')}月`;
+
+        function updateTimeline() {
+            const match = /^(\d{4})-(\d{2})$/.exec($('tl-handover-month').value);
+            if (!match) return;
+            const y = +match[1], m = +match[2];
+            const at = d => fmtYM(shiftYM(y, m, d));
+            setText('tl-tax-window', `${at(-24)} ～ ${at(0)}`);
+            setText('tl-loan-deadline', `最晚 ${at(-4)} 前完成過戶塗銷`);
+            setText('tl-bank-match', `${at(-6)}～${at(-3)}`);
+            setText('tl-leaseback-window', `建議 ${at(-12)}前後 售出並回租至交屋`);
+            scheduleSave();
+        }
+
+        /* ---------- Section 3: Presale settlement & mortgage ---------- */
+        const getPresalePrice = () => Math.max(0, num('mtg-presale-price-num', 3800));
+        const getLTV = () => clamp(num('mtg-ltv-num', 80), 0, 100);
+        const getPaidTotal = () => paidItems.reduce((s, it) => s + (it.included ? it.amount : 0), 0);
+
+        function syncPresaleFromSlider() { $('mtg-presale-price-num').value = num('mtg-presale-price', 3800); recalcMortgage(); }
+        function syncPresaleFromInput() {
+            const v = parseFloat($('mtg-presale-price-num').value);
+            if (Number.isFinite(v)) $('mtg-presale-price').value = clamp(v, 1000, 8000);
+            recalcMortgage();
+        }
+        function syncLTVFromSlider() { $('mtg-ltv-num').value = num('mtg-ltv-slider', 80); recalcMortgage(); }
+        function syncLTVFromInput() {
+            const v = parseFloat($('mtg-ltv-num').value);
+            if (Number.isFinite(v)) $('mtg-ltv-slider').value = clamp(v, 0, 85);
+            recalcMortgage();
+        }
+        function setLTV(v) { $('mtg-ltv-num').value = v; $('mtg-ltv-slider').value = clamp(v, 0, 85); recalcMortgage(); }
+
+        function highlightPills(selector, idPrefix, active) {
+            document.querySelectorAll(selector).forEach(btn => {
+                const on = btn.id === `${idPrefix}-${active}`;
+                btn.className = (selector === '.term-btn' ? 'term-btn' : 'grace-btn') + ' py-2 text-xs font-bold rounded-xl transition ' +
+                    (on ? 'border-2 border-[#1E4D40] bg-[#1E4D40] text-white'
+                        : 'border border-[#E6E4DF] bg-[#F9F8F6] text-slate-700 hover:border-[#1E4D40]');
+            });
+        }
+        function setTerm(years, silent = false) {
+            years = clamp(parseInt(years, 10) || 30, 5, 40);
+            $('mtg-term').value = years;
+            $('mtg-term-num').value = years;
+            highlightPills('.term-btn', 'btn-term', years);
+            if (!silent) recalcMortgage();
+        }
+        function syncTermFromInput() {
+            const v = parseInt($('mtg-term-num').value, 10);
+            if (!(v >= 5 && v <= 40)) return;
+            $('mtg-term').value = v;
+            highlightPills('.term-btn', 'btn-term', v);
+            recalcMortgage();
+        }
+        function setGrace(years, silent = false) {
+            $('mtg-grace').value = years;
+            highlightPills('.grace-btn', 'btn-grace', years);
+            if (!silent) recalcMortgage();
+        }
+        function syncRateFromSlider() {
+            $('mtg-rate-num').value = num('mtg-rate', 2.25).toFixed(2);
+            recalcMortgage();
+        }
+        function syncRateFromInput() {
+            const v = Math.max(0, num('mtg-rate-num', 0));
+            $('mtg-rate').value = clamp(v, 1.5, 3.5);
+            recalcMortgage();
+        }
+
+        /* Already-paid items table (event delegation, no focus loss while typing) */
+        function renderPaidItems() {
+            $('paid-items-tbody').innerHTML = paidItems.map(it => `
+                <tr data-id="${escapeHtml(it.id)}">
+                    <td class="py-2 px-3 sm:px-4 text-center"><input type="checkbox" data-f="included" ${it.included ? 'checked' : ''} aria-label="計入此款項" class="w-4 h-4 accent-[#1E4D40] rounded"></td>
+                    <td class="py-2 px-3"><input type="text" data-f="name" value="${escapeHtml(it.name)}" aria-label="款項名稱" class="w-full bg-transparent border-b border-transparent hover:border-stone-300 focus:border-[#1E4D40] focus:outline-none text-slate-800"></td>
+                    <td class="py-2 px-3"><div class="flex items-center justify-end gap-1.5"><input type="number" data-f="amount" min="0" step="10" value="${it.amount}" aria-label="已繳金額（萬元）" class="w-24 text-right font-bold num-font bg-white border border-stone-300 focus:border-[#1E4D40] rounded-lg px-2 py-1 focus:outline-none"><span class="text-xs text-slate-400">萬</span></div></td>
+                    <td class="py-2 px-3 text-right text-slate-500 num-font hidden sm:table-cell" data-pct></td>
+                    <td class="py-2 px-3 text-center no-print"><button type="button" data-act="del" aria-label="刪除此款項" class="text-slate-400 hover:text-rose-600 transition"><i class="fa-solid fa-trash-can"></i></button></td>
+                </tr>`).join('');
+        }
+        function addPaidRow() {
+            paidItems.push({ id: 'paid-' + Date.now().toString(36), name: '新增款項', amount: 0, included: true });
+            renderPaidItems();
+            recalcMortgage();
+            const inp = $('paid-items-tbody').querySelector('tr:last-child [data-f="name"]');
+            if (inp) { inp.focus(); inp.select(); }
+        }
+        function initPaidTable() {
+            const tbody = $('paid-items-tbody');
+            const find = e => { const tr = e.target.closest('tr'); return tr && paidItems.find(x => x.id === tr.dataset.id); };
+            tbody.addEventListener('input', e => {
+                const it = find(e), f = e.target.dataset.f;
+                if (!it) return;
+                if (f === 'name') { it.name = e.target.value; scheduleSave(); }
+                else if (f === 'amount') { it.amount = Math.max(0, parseFloat(e.target.value) || 0); recalcMortgage(); }
+            });
+            tbody.addEventListener('change', e => {
+                const it = find(e);
+                if (it && e.target.dataset.f === 'included') { it.included = e.target.checked; recalcMortgage(); }
+            });
+            tbody.addEventListener('click', e => {
+                const btn = e.target.closest('[data-act="del"]');
+                if (!btn) return;
+                const id = btn.closest('tr').dataset.id;
+                paidItems = paidItems.filter(x => x.id !== id);
+                renderPaidItems();
+                recalcMortgage();
+            });
+        }
+
+        function calcLoanMetrics(loanWan, termYears, annualRate, graceYears, method) {
+            const P = loanWan * 10000;
+            const r = (annualRate / 100) / 12;
+            const totalMonths = termYears * 12;
+            const graceMonths = Math.min(graceYears * 12, Math.max(0, totalMonths - 12));
+            const amortMonths = Math.max(1, totalMonths - graceMonths);
+            if (P <= 0) return { graceMonthly: 0, postMonthly: 0, firstP: 0, lastP: 0, totalInterestWan: 0 };
+
+            const graceMonthly = P * r;
+            let postMonthly, firstP, lastP, amortInterest;
+            if (method === 'pi') {
+                if (r === 0) postMonthly = P / amortMonths;
+                else { const f = Math.pow(1 + r, amortMonths); postMonthly = P * r * f / (f - 1); }
+                firstP = lastP = postMonthly;
+                amortInterest = postMonthly * amortMonths - P;
+            } else {
+                const prin = P / amortMonths;
+                firstP = prin + P * r;
+                lastP = prin + prin * r;
+                postMonthly = firstP;
+                amortInterest = (amortMonths / 2) * (P * r + prin * r);
+            }
+            return { graceMonthly, postMonthly, firstP, lastP, totalInterestWan: (graceMonthly * graceMonths + amortInterest) / 10000 };
+        }
+
+        function dtiClass(dti) {
+            if (dti <= 40) return 'bg-emerald-400/20 text-emerald-200';
+            if (dti <= 60) return 'bg-amber-400/20 text-amber-300';
+            return 'bg-rose-400/20 text-rose-200';
+        }
+
+        function recalcMortgage(skipSave = false) {
+            const presalePrice = getPresalePrice();
+            const ltv = getLTV();
+            const term = clamp(parseInt($('mtg-term').value, 10) || 30, 1, 40);
+            const grace = Math.min(parseInt($('mtg-grace').value, 10) || 0, term - 1);
+            const rate = Math.max(0, num('mtg-rate-num', 2.25));
+            const method = $('mtg-method').value || 'pi';
+            const income = Math.max(1, num('mtg-income', 20));
+
+            const paidTotal = getPaidTotal();
+            const loanTotal = presalePrice * ltv / 100;
+            const rawBalance = presalePrice - paidTotal - loanTotal;
+            const balanceDue = Math.max(0, rawBalance);
+
+            // Paid table summary
+            setText('disp-ltv-loan-wan', fmt1(loanTotal));
+            setText('disp-paid-total', fmt1(paidTotal));
+            setText('disp-paid-pct', (presalePrice > 0 ? paidTotal / presalePrice * 100 : 0).toFixed(1));
+            document.querySelectorAll('#paid-items-tbody tr').forEach(tr => {
+                const it = paidItems.find(x => x.id === tr.dataset.id);
+                const cell = tr.querySelector('[data-pct]');
+                if (it && cell) cell.textContent = (presalePrice > 0 ? it.amount / presalePrice * 100 : 0).toFixed(1) + '%';
+            });
+
+            // Settlement equation
+            setText('eq-total-price', fmt1(presalePrice));
+            setText('eq-paid-sum', fmt1(paidTotal));
+            setText('eq-ltv-lbl', ltv);
+            setText('eq-loan-sum', fmt1(loanTotal));
+            setText('eq-balance-due', fmt1(balanceDue));
+            const over = rawBalance < -0.05;
+            $('eq-overfund-note').classList.toggle('hidden', !over);
+            if (over) setText('eq-overfund-amt', fmt1(-rawBalance));
+
+            // Sale net cash vs. balance due
+            const afterHandover = currentNetCash - balanceDue;
+            setText('settle-sale-net', `${fmt1(currentNetCash)} 萬元`);
+            setText('settle-balance-due', `- ${fmt1(balanceDue)} 萬元`);
+            const ok = afterHandover >= 0;
+            const card = $('settlement-result-card'), label = $('settle-status-label'), amt = $('settle-final-amount');
+            card.className = 'lg:col-span-5 rounded-xl p-4 sm:p-5 border-2 flex flex-col justify-between ' +
+                (ok ? 'border-[#1E4D40] bg-[#1E4D40]/5' : 'border-[#B45309] bg-amber-50');
+            label.className = 'text-xs font-bold ' + (ok ? 'text-[#1E4D40]' : 'text-[#B45309]');
+            label.textContent = ok ? '交屋後剩餘可動用現金（裝潢＋家具＋家庭預備金）' : '尚需額外自籌現金缺口（售屋實拿不足支付交屋尾款）';
+            amt.className = 'text-2xl sm:text-3xl font-bold num-font mt-0.5 ' + (ok ? 'text-[#1E4D40]' : 'text-[#B45309]');
+            amt.innerHTML = `${ok ? '+' : '-'} ${fmt1(Math.abs(afterHandover))} <span class="text-xs font-normal">萬元</span>`;
+
+            // Monthly payment card
+            setText('mtg-sub-loan-wan', fmt1(loanTotal));
+            setText('mtg-badge-summary', `${term}年期 · ${rate.toFixed(2)}%`);
+            setText('out-ltv-pct-lbl', ltv);
+            setText('out-loan-total', fmt1(loanTotal));
+            setText('out-down-payment', fmt1(balanceDue));
+
+            const m = calcLoanMetrics(loanTotal, term, rate, grace, method);
+            if (grace > 0) {
+                setText('out-grace-label', `寬限期內（第 1 ～ ${grace} 年）每月繳款`);
+                $('out-grace-payment').innerHTML = `${fmt0(m.graceMonthly)} <span class="text-xs font-normal text-emerald-200">元 / 月</span>`;
+                setText('out-post-grace-label', `寬限期後（第 ${grace + 1} ～ ${term} 年）每月繳款`);
+            } else {
+                setText('out-grace-label', '寬限期設定：0 年');
+                $('out-grace-payment').innerHTML = '<span class="text-sm font-medium text-emerald-100">無寬限期，直接進入本息攤還</span>';
+                setText('out-post-grace-label', `全期（第 1 ～ ${term} 年）每月繳款`);
+            }
+            setText('out-post-grace-payment', fmt0(m.postMonthly));
+
+            const showRange = method === 'p' && loanTotal > 0;
+            $('out-p-range-note').classList.toggle('hidden', !showRange);
+            if (showRange) { setText('out-p-first', fmt0(m.firstP)); setText('out-p-last', fmt0(m.lastP)); }
+
+            const dti = m.postMonthly / (income * 10000) * 100;
+            setText('out-total-interest', fmt1(m.totalInterestWan));
+            const pill = $('out-dti-pill');
+            pill.textContent = `收支比 ${dti.toFixed(1)}%`;
+            pill.className = `px-2 py-0.5 rounded-full text-[11px] font-bold ${dtiClass(dti)}`;
+
+            // Principal vs. interest bar
+            const totalRepay = loanTotal + m.totalInterestWan;
+            const pPct = totalRepay > 0 ? loanTotal / totalRepay * 100 : 100;
+            setText('vis-total-repay', fmt1(totalRepay));
+            $('vis-principal-bar').style.width = pPct.toFixed(1) + '%';
+            $('vis-interest-bar').style.width = (100 - pPct).toFixed(1) + '%';
+            setText('vis-principal-pct', pPct.toFixed(1) + '%');
+            setText('vis-interest-pct', (100 - pPct).toFixed(1) + '%');
+
+            // 20 / 30 / 40 comparison (+ custom term row when needed)
+            const terms = [20, 30, 40];
+            if (!terms.includes(term)) terms.push(term);
+            terms.sort((a, b) => a - b);
+            $('mtg-term-tbody').innerHTML = terms.map(t => {
+                const x = calcLoanMetrics(loanTotal, t, rate, grace, method);
+                const d = x.postMonthly / (income * 10000) * 100;
+                const cur = t === term;
+                const name = [20, 30, 40].includes(t) ? `${t} 年` : `自訂 ${t} 年`;
+                return `<tr class="${cur ? 'bg-[#1E4D40]/5 font-bold text-[#1E4D40]' : 'text-slate-700'}">
+                    <td class="py-2.5 px-3">${name}${cur ? ' <span class="text-[10px] font-semibold">（目前）</span>' : ''}</td>
+                    <td class="py-2.5 px-3 text-right">${fmt0(x.postMonthly)} 元</td>
+                    <td class="py-2.5 px-3 text-right">${fmt1(x.totalInterestWan)} 萬</td>
+                    <td class="py-2.5 px-3 text-right">${d.toFixed(1)}%</td></tr>`;
+            }).join('');
+
+            if (!skipSave) scheduleSave();
+        }
+
+        /* ---------- Section 4: Checklist ---------- */
+        function saveChecklist() {
+            const boxes = document.querySelectorAll('.chk-box');
+            const done = [...boxes].filter(b => b.checked).length;
+            setText('chk-progress-text', `${done} / ${boxes.length}`);
+            scheduleSave();
+        }
+        function resetChecklist() {
+            document.querySelectorAll('.chk-box').forEach(b => { b.checked = false; });
+            saveChecklist();
+        }
+
+        /* ---------- State: apply / save / load / reset ---------- */
+        function applyState(s) {
+            const unit = num0(s.unitPrice, DEFAULTS.unitPrice);
+            $('sale-unit-price-num').value = unit.toFixed(1);
+            $('sale-unit-price').value = clamp(unit, 50, 120);
+            const comm = num0(s.commRate, DEFAULTS.commRate);
+            $('sale-comm-rate-num').value = comm.toFixed(1);
+            $('sale-comm-rate').value = clamp(comm, 1, 4);
+            $('sale-mortgage-rem').value = num0(s.remMortgage, 0);
+            $('sale-misc-fee').value = num0(s.miscFee, DEFAULTS.miscFee);
+            $('tax-land-val').value = num0(s.landTax, DEFAULTS.landTax);
+            $('tax-regime').value = s.regime === 'old' ? 'old' : 'new20';
+            $('tax-hold-years').value = ['over10', '5to10', '2to5'].includes(s.holdYears) ? s.holdYears : 'over10';
+            $('tax-include-in-net').checked = s.includeCgt !== false;
+            $('tax-buy-cost').value = num0(s.buyCost, DEFAULTS.buyCost);
+            $('tax-deduct-fee').value = num0(s.deductFee, DEFAULTS.deductFee);
+            $('tax-self-use-6yr').checked = s.selfUse6Yr !== false;
+            if (/^\d{4}-\d{2}$/.test(s.handoverMonth)) $('tl-handover-month').value = s.handoverMonth;
+
+            const pp = num0(s.presalePrice, DEFAULTS.presalePrice);
+            $('mtg-presale-price-num').value = pp;
+            $('mtg-presale-price').value = clamp(pp, 1000, 8000);
+            const ltv = clamp(num0(s.ltv, DEFAULTS.ltv), 0, 100);
+            $('mtg-ltv-num').value = ltv;
+            $('mtg-ltv-slider').value = clamp(ltv, 0, 85);
+            setTerm(s.term, true);
+            setGrace(num0(s.grace, DEFAULTS.grace), true);
+            const rt = num0(s.rate, DEFAULTS.rate);
+            $('mtg-rate-num').value = rt.toFixed(2);
+            $('mtg-rate').value = clamp(rt, 1.5, 3.5);
+            $('mtg-method').value = s.method === 'p' ? 'p' : 'pi';
+            $('mtg-income').value = Math.max(1, num0(s.income, DEFAULTS.income));
+
+            paidItems = Array.isArray(s.paidItems)
+                ? s.paidItems.map((it, i) => ({
+                    id: String(it.id || `paid-x${i}`), name: String(it.name ?? ''),
+                    amount: Math.max(0, parseFloat(it.amount) || 0), included: it.included !== false }))
+                : JSON.parse(JSON.stringify(DEFAULT_PAID_ITEMS));
+            renderPaidItems();
+
+            const chk = s.checklist || {};
+            document.querySelectorAll('.chk-box').forEach(b => { b.checked = !!chk[b.id]; });
+        }
+        function num0(v, fb) { const n = parseFloat(v); return Number.isFinite(n) ? n : fb; }
+
+        function saveState() {
+            try {
+                const checklist = {};
+                document.querySelectorAll('.chk-box').forEach(b => { checklist[b.id] = b.checked; });
+                localStorage.setItem(STORAGE_KEY, JSON.stringify({
+                    unitPrice: $('sale-unit-price-num').value, commRate: $('sale-comm-rate-num').value,
+                    remMortgage: $('sale-mortgage-rem').value, miscFee: $('sale-misc-fee').value,
+                    landTax: $('tax-land-val').value, regime: $('tax-regime').value,
+                    holdYears: $('tax-hold-years').value, includeCgt: $('tax-include-in-net').checked,
+                    buyCost: $('tax-buy-cost').value, deductFee: $('tax-deduct-fee').value,
+                    selfUse6Yr: $('tax-self-use-6yr').checked, handoverMonth: $('tl-handover-month').value,
+                    presalePrice: $('mtg-presale-price-num').value, ltv: $('mtg-ltv-num').value,
+                    term: $('mtg-term').value, grace: $('mtg-grace').value, rate: $('mtg-rate-num').value,
+                    method: $('mtg-method').value, income: $('mtg-income').value, paidItems, checklist
+                }));
+            } catch (e) { /* storage unavailable (private mode / file://) */ }
+        }
+        function scheduleSave() { clearTimeout(saveTimer); saveTimer = setTimeout(saveState, 300); }
+
+        function loadState() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                return raw ? { ...DEFAULTS, ...JSON.parse(raw) } : { ...DEFAULTS };
+            } catch (e) { return { ...DEFAULTS }; }
+        }
+
+        function resetAll() {
+            try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+            applyState(DEFAULTS);
+            matchScenarioHighlight(DEFAULTS.unitPrice);
+            recalcAll();
+            updateTimeline();
+            saveChecklist();
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initPaidTable();
+            applyState(loadState());
+            matchScenarioHighlight(num('sale-unit-price-num', 80));
+            recalcAll();
+            updateTimeline();
+            saveChecklist();
+        });
+        window.addEventListener('pagehide', saveState);
+    </script>
+</body>
+</html>
